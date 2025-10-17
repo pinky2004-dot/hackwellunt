@@ -1,0 +1,201 @@
+/* ======== GENERAL STYLES & VARIABLES ======== */
+:root {
+    --primary-color: #00853e; /* UNT Green */
+    --secondary-color: #005a2b;
+    --dark-color: #333;
+    --light-color: #fff;
+    --gray-bg: #f4f4f4;
+    --font-family: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    line-height: 1.6;
+    color: var(--dark-color);
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.8rem; }
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.content-section {
+    padding: 60px 20px;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gray-bg {
+    background-color: var(--gray-bg);
+}
+
+/* ======== HEADER & NAVIGATION ======== */
+header {
+    background: var(--light-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--dark-color);
+}
+
+nav .nav-links a {
+    color: var(--dark-color);
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* ======== HERO SECTION ======== */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1500x800.png?text=UNT+Campus') no-repeat center center/cover;
+    color: var(--light-color);
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+
+.hero .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero .date-venue {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background: var(--primary-color);
+    color: var(--light-color);
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: var(--secondary-color);
+}
+
+
+/* ======== SCHEDULE ======== */
+.schedule-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    gap: 40px;
+    margin-top: 2rem;
+}
+
+.schedule-day ul {
+    list-style: none;
+    padding: 0;
+}
+
+.schedule-day li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* ======== JUDGES & MENTORS ======== */
+.speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+.speakers-subtitle {
+    margin-top: 3rem;
+}
+
+.speaker-card {
+    background: var(--light-color);
+    border: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.speaker-card a {
+    display: inline-block;
+    margin-top: 10px;
+    background: var(--gray-bg);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* ======== FAQ ======== */
+.faq-item {
+    text-align: left;
+    max-width: 700px;
+    margin: 1.5rem auto;
+}
+
+/* ======== FOOTER ======== */
+footer {
+    background: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 20px;
+}
+footer p {
+    margin: 5px 0;
+}
+
+/* ======== RESPONSIVE DESIGN ======== */
+@media (max-width: 768px) {
+    h2 { font-size: 2rem; }
+    .hero h1 { font-size: 3rem; }
+    
+    nav {
+        flex-direction: column;
+    }
+
+    nav .nav-links {
+        margin-top: 10px;
+    }
+
+    .schedule-container {
+        flex-direction: column;
+    }
+}
